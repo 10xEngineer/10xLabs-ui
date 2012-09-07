@@ -1,0 +1,12 @@
+.left-column
+    div(ng-repeat="widget in widgetsList.widgets|filter:'left-column'")
+        ng-switch(on="widget.type")
+            lab-overview.area(ng-switch-when="lab-overview")
+            lab-current-state.area(ng-switch-when="lab-current-state")
+.right-column
+    div(ng-repeat="widget in widgetsList.widgets|filter:'right-column'")
+        ng-switch(on="widget.type")
+            lab-actions.area(ng-switch-when="lab-actions")
+            lab-performance.area(ng-switch-when="lab-performance")
+.clear
+lab-tabs

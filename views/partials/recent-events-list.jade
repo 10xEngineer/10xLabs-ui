@@ -1,0 +1,4 @@
+ul.recent-events-list
+    li(ng-repeat="row in widget.data.rows", data-message-type="{{row.icon}}")
+        h4 {{row.title}}
+        p {{row.description}}

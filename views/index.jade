@@ -1,0 +1,16 @@
+extends layout
+block content
+  .header-wrapper
+      header
+        ul.links-list
+          li.settings-link.active
+            a(href='#') Settings
+          li.users-link
+            a(href='#') Users
+          li.bundles-link
+            a(href='#') Bundles
+  .nav-wrapper
+    navbar(ng-controller="navbarController")
+    notifications
+  .main-wrapper
+    ng-view

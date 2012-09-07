@@ -1,0 +1,181 @@
+extends layout
+block content
+  .header-wrapper
+      header
+        ul.links-list
+          li.settings-link.active
+            a(href='#') Settings
+          li.users-link
+            a(href='#') Users
+          li.bundles-link
+            a(href='#') Bundles
+    .nav-wrapper
+      nav
+        ul.tabs
+          li
+            a(href='#') News Feed
+          li.active
+            a(href='#') Archive
+          li
+            a(href='#') Blog
+          li
+            a(href='#') Web Board
+          li
+            a(href='#') About Us
+      ul.notifications-list
+        li.info
+          a(href='#') Info
+        li.warning
+          a(href='#') Warning
+        li.refresh
+          a(href='#') Refresh
+    .main-wrapper(ng-controller='widgetsController')
+      .left-column
+        .area(ng-repeat="widget in widgetsList.widgets|filter:'left-column'")
+            h3 {{widget.title}}
+        //.area
+          h3 Action required
+          table.events-table
+            tr
+              td.event-icon-cell
+                span.icon-dummy-01
+              td.message-cell New message from support
+              td.time-ago-cell 1 hour ago
+              td.remove-link-cell
+                a.icon-remove(href='#')
+              td.pin-link-cell
+                a.icon-pin(href='#')
+            tr.alert
+              td.event-icon-cell
+                span.icon-dummy-02
+              td.message-cell Lab1 is running out of memory!
+              td.time-ago-cell 1 hour ago
+              td.remove-link-cell
+                a.icon-remove(href='#')
+              td.pin-link-cell
+                a.icon-pin(href='#')
+            tr
+              td.event-icon-cell
+                span.icon-dummy-03
+              td.message-cell Invoice is ready
+              td.time-ago-cell 5 minutes ago
+              td.remove-link-cell
+                a.icon-remove(href='#')
+              td.pin-link-cell
+                a.icon-pin(href='#')
+            tr
+              td.event-icon-cell
+                span.icon-dummy-03
+              td.message-cell Invoice is ready
+              td.time-ago-cell 5 minutes ago
+              td.remove-link-cell
+                a.icon-remove(href='#')
+              td.pin-link-cell
+                a.icon-pin(href='#')
+            tr
+              td.event-icon-cell
+                span.icon-dummy-01
+              td.message-cell New message from support
+              td.time-ago-cell 1 hour ago
+              td.remove-link-cell
+                a.icon-remove(href='#')
+              td.pin-link-cell
+                a.icon-pin(href='#')
+            tr
+              td.event-icon-cell
+                span.icon-dummy-03
+              td.message-cell New software available
+              td.time-ago-cell yesterday
+              td.remove-link-cell
+                a.icon-remove(href='#')
+              td.pin-link-cell
+                a.icon-pin(href='#')
+            tr.alert
+              td.event-icon-cell
+                span.icon-dummy-02
+              td.message-cell Lab1 is running out of memory!
+              td.time-ago-cell 1 hour ago
+              td.remove-link-cell
+                a.icon-remove(href='#')
+              td.pin-link-cell
+                a.icon-pin(href='#')
+            tr
+              td.event-icon-cell
+                span.icon-dummy-03
+              td.message-cell Invoice is ready
+              td.time-ago-cell 5 minutes ago
+              td.remove-link-cell
+                a.icon-remove(href='#')
+              td.pin-link-cell
+                a.icon-pin(href='#')
+     //   .area
+          h3 Recent Events
+          ul.recent-events-list
+            li.icon-dummy-05
+              h4 Production lab
+              p
+                | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+            li.icon-dummy-06
+              h4 Production lab
+              p
+                | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+            li.icon-dummy-06
+              h4 Production lab
+              p
+                | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+            li.icon-dummy-06
+              h4 Production lab
+              p
+                | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+       // .area
+          .service-feed
+            span.title Service Feed
+            ul.messages-list
+              li
+                | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+              li
+                | Iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+            a.next-message-link(href='#') Next
+            a.previous-message-link(href='#') Previous
+      .right-column
+        .area(ng-repeat="widget in widgetsList.widgets|filter:'right-column'")
+            h3 {{widget.title}}
+  //      .area
+          h3 Labs
+          ul.labs-list
+            li
+              .lab-container
+                h4 My test lab
+                p
+                  | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+              .lab-actions
+                a.clone-link(href='#') Clone
+                a.edit-link(href='#') Edit
+                a.remove-link(href='#') Remove
+            li
+              .lab-container
+                h4 My test lab
+                p
+                  | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+              .lab-actions
+                a.clone-link(href='#') Clone
+                a.edit-link(href='#') Edit
+                a.remove-link(href='#') Remove
+            li
+              .lab-container
+                h4 My test lab
+                p
+                  | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+              .lab-actions
+                a.clone-link(href='#') Clone
+                a.edit-link(href='#') Edit
+                a.remove-link(href='#') Remove
+            li
+              .lab-container
+                h4 My test lab
+                p
+                  | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+              .lab-actions
+                a.clone-link(href='#') Clone
+                a.edit-link(href='#') Edit
+                a.remove-link(href='#') Remove

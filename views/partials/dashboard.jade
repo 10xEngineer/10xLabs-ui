@@ -1,0 +1,15 @@
+.left-column
+    .area(ng-repeat="widget in widgetsList.widgets|filter:'left-column'", ng-switch="widget.type")
+        div(ng-switch-when="important-messages")
+            h3 {{widget.title}}
+            important-messages-table
+        div(ng-switch-when="recent-events")
+            h3 {{widget.title}}
+            recent-events-list
+        div(ng-switch-when="service-feed")
+            service-feed
+.right-column
+    .area(ng-repeat="widget in widgetsList.widgets|filter:'right-column'", ng-switch="widget.type")
+        div(ng-switch-when="labs")
+            h3 {{widget.title}}
+            labs-list

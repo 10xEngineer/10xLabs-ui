@@ -1,0 +1,6 @@
+.lab-tabs
+    div(ng-repeat="tabs in widgetsList.widgets|filter:'lab-tabs'")
+        ul.tabs-list
+            li(ng-repeat="tab in tabs.data.tabs", ng-class="{true:'active', false:''}[$first]")
+                a(href='#') {{tab.title}}
+        .tabs-container

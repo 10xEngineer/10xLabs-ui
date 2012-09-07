@@ -1,0 +1,9 @@
+ul.labs-list
+    li(ng-repeat="row in widget.data.rows", data-icon="{{row.icon}}")
+        .lab-container
+            h4 {{row.title}}
+            p {{row.description}}
+        .lab-actions
+            a.clone-link(href="#")
+            a.edit-link(href="#")
+            a.remove-link(href="#")

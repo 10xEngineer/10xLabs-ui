@@ -1,0 +1,12 @@
+table.events-table
+    tr(ng-repeat="row in widget.data.rows", data-message-type="{{row.icon}}")
+        td.event-icon-cell
+            span(class="icon")
+        td.message-cell
+            {{row.message}}
+        td.time-ago-cell(timeago)
+            time(datetime="{{row.timestamp}}") {{row.timestamp}}
+        td.remove-link-cell
+            a.icon-remove(href="#")
+        td.pin-link-cell
+            a.icon-pin(href="#")

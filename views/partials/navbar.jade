@@ -1,0 +1,10 @@
+nav(navbar-active-link)
+    ul.tabs
+        li(ng-class="{active:isActive('/')}")
+            a(href='/') Home
+        li(ng-class="{active:isActive('/dashboard')}")
+            a(href='/dashboard') Dashboard
+        li(ng-class="{active:isActive('/lab')}")
+            a(href='/lab') Lab
+        li(ng-class="{active:isActive('/store')}")
+            a(href='/store') Store

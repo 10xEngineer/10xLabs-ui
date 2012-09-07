@@ -1,0 +1,7 @@
+.current-state-box(data-box-type="{{box.type}}")
+    .content
+        h4
+            span.counter {{box.messages.length}}
+            span.title {{box.title}}
+        ol.messages-list
+            li(ng-repeat="message in box.messages") {{message.title}}
